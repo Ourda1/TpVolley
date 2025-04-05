@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textView5"
+            style="@style/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Photo :"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            style="@style/input"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/photo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/person"
+                app:shapeAppearanceOverlay="@style/RoundedImageView" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/label_nom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nom : "
+                android:textStyle="bold"
+                android:textColor="@color/material_on_surface_emphasis_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/nom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/label_nom"
+                app:layout_constraintTop_toTopOf="@id/label_nom"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/label_prenom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prénom : "
+                android:textStyle="bold"
+                android:textColor="@color/material_on_surface_emphasis_medium"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_nom" />
+
+            <TextView
+                android:id="@+id/prenom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/label_prenom"
+                app:layout_constraintTop_toTopOf="@id/label_prenom"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/label_ville"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ville : "
+                android:textStyle="bold"
+                android:textColor="@color/material_on_surface_emphasis_medium"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_prenom" />
+
+            <TextView
+                android:id="@+id/ville"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/label_ville"
+                app:layout_constraintTop_toTopOf="@id/label_ville"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/label_sexe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sexe : "
+                android:textStyle="bold"
+                android:textColor="@color/material_on_surface_emphasis_medium"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_ville" />
+
+            <TextView
+                android:id="@+id/sexe"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/label_sexe"
+                app:layout_constraintTop_toTopOf="@id/label_sexe"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/label_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date de Naissance : "
+                android:textStyle="bold"
+                android:textColor="@color/material_on_surface_emphasis_medium"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_sexe" />
+
+            <TextView
+                android:id="@+id/dateNaissance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/label_date"
+                app:layout_constraintTop_toTopOf="@id/label_date"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
